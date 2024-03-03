@@ -1,0 +1,274 @@
+body {
+  cursor: default;
+  user-select: none;
+  margin: 0;
+  background-color: #060d17;
+  background-image: url(/LYL/images/background.jpeg);
+  background-size: contain;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body svg {
+  cursor: pointer;
+}
+
+.container {
+  color: white;
+  background-color: #060d17;
+  opacity: 0.9;
+
+  overflow: hidden;
+}
+
+.top-menu {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-menu-right {
+  display: flex;
+}
+.top-menu-right div {
+  margin-right: 3px;
+}
+
+.top-menu-left {
+  display: flex;
+}
+
+.popular-movie-view {
+  display: flex;
+  justify-content: space-between;
+
+  height: 430px;
+}
+
+.popular-movie-view div {
+  /* background-color: #d9d9d9; */
+  border-radius: 10px;
+  height: 100%;
+  width: 24.5%;
+}
+
+.text-overlay-title {
+  position: absolute;
+}
+
+.text-overlay-rate {
+  position: absolute;
+}
+
+.category-movie {
+  display: flex;
+  justify-content: space-between;
+
+  height: 250px;
+}
+
+.category-movie div {
+  /* background-color: #d9d9d9; */
+
+  height: 100%;
+  width: 15.5%;
+}
+
+.popular-movie {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.popular-movie::before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* 호버링 시 블러 처리 */
+  opacity: 0; /* 호버링 시 투명도 조절 */
+  transition: opacity 0.3s ease; /* 부드러운 트랜지션 */
+}
+
+.popular-movie:hover::before {
+  opacity: 1; /* 호버링 시 블러 처리 */
+}
+
+.popular-movie:hover .text-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  backdrop-filter: none; /* 호버링 시 블러 해제 */
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bbb {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.bbbb {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.today-movie {
+  margin-bottom: 2%;
+}
+
+.top-10-side-img {
+  background-color: black;
+  font-size: 13vw;
+  font-weight: bold;
+  color: black;
+  -webkit-text-stroke: 2px white;
+  height: 100%;
+  width: 100%;
+
+  padding-left: 1%;
+  padding-top: 120px;
+}
+
+@media screen and (min-width: 800px) {
+  .top-10-side-img {
+    font-size: 105px; /* 뷰포트 너비가 800px 이하인 경우 글자 크기를 14px로 설정 */
+  }
+}
+
+.top-10-side {
+  background-color: black;
+  display: flex;
+  /* align-items: end; */
+  height: 100%;
+  overflow: hidden;
+}
+
+.category-title {
+  margin-top: 3%;
+  margin-bottom: 2%;
+
+  margin-right: 1%;
+}
+
+.today-top-10-movie {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+
+  height: 250px;
+}
+
+.today-top-10-movie div {
+  /* background-color: #d9d9d9; */
+
+  height: 100%;
+  width: 23%;
+}
+.img-box {
+  display: flex;
+  position: relative;
+}
+.text-contacts {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 0;
+}
+
+.top-10-side {
+  position: relative;
+}
+
+.top-10-side::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* 호버링 시 블러 처리 */
+  opacity: 0; /* 호버링 시 투명도 조절 */
+  transition: opacity 0.3s ease; /* 부드러운 트랜지션 */
+}
+
+.top-10-side:hover::before {
+  opacity: 1; /* 호버링 시 투명도 조절 */
+}
+
+.top-10-side:hover .text-contacts {
+  display: flex;
+  opacity: 1;
+  backdrop-filter: none; /* 호버링 시 블러 해제 */
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text-title {
+  margin-bottom: 6%;
+  font-size: 1em;
+}
+
+.text-rate {
+  margin-bottom: 0.6em;
+}
+
+.text-category {
+  font-size: 0.9em;
+}
+
+.paginationArrow {
+  display: flex;
+  justify-content: end;
+}
+
+.category-change {
+  display: flex;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.category-change-arrow {
+  position: absolute;
+  left: 90px;
+}
+
+.category-change-title {
+  display: flex;
+}
+
+.scroll-end {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 3%;
+  justify-content: space-between;
+}
+
+.scroll-end div {
+  height: 250px;
+  width: 15.5%;
+
+  margin-bottom: 3%;
+}
+
+.book-marked-view {
+  display: flex;
+
+  height: 250px;
+  margin-bottom: 3%;
+  justify-content: baseline;
+}
+
+.book-marked-view div {
+  display: flex;
+  margin-right: 1.4%;
+  height: 100%;
+  width: 15.5%;
+}
